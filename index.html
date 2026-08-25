@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kanmani Finds | @kanmani.vishal</title>
 <meta name="description" content="Kanmani Finds — mom talks, baby essentials and useful finds from @kanmani.vishal">
+
 <style>
 *{box-sizing:border-box}
+
 :root{
   --cream:#fffaf3;
   --brown:#4d3528;
@@ -20,7 +22,9 @@
   --purple:#9673b8;
   --purple-soft:#f7effc;
 }
+
 html{scroll-behavior:smooth}
+
 body{
   margin:0;
   min-height:100vh;
@@ -30,162 +34,1129 @@ body{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%23d8c9b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='.38'%3E%3Cpath d='M25 34l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1z'/%3E%3Cpath d='M202 25c8-12 28-8 29 8 1 15-19 23-29 29-10-6-30-14-29-29 1-16 21-20 29-8z'/%3E%3Cpath d='M55 104c0-8 6-14 14-14s14 6 14 14v32c0 6-5 11-11 11H66c-6 0-11-5-11-11z'/%3E%3Cpath d='M55 111h28M61 104c4-4 12-4 16 0'/%3E%3Cpath d='M183 92c-13 0-22 8-22 19 0 12 10 20 22 20s22-8 22-20c0-11-9-19-22-19z'/%3E%3Cpath d='M174 112c3-3 6-3 9 0 3-3 6-3 9 0M176 121h14'/%3E%3Cpath d='M105 201c-8-7-17-4-20 3-3 8 3 15 11 16 8 1 15-4 17-12 2-8 0-14-8-19-8-5-14-1-15 6'/%3E%3Cpath d='M111 199c8-7 17-4 20 3 3 8-3 15-11 16-8 1-15-4-17-12'/%3E%3Cpath d='M226 170l8 10-8 10-8-10z'/%3E%3Cpath d='M36 184c-8 0-14 5-14 12 0 8 7 13 14 13s14-5 14-13c0-7-6-12-14-12zM29 197h14'/%3E%3Ccircle cx='144' cy='52' r='3'/%3E%3Ccircle cx='232' cy='118' r='3'/%3E%3Ccircle cx='91' cy='40' r='3'/%3E%3Cpath d='M150 222c7-7 18-7 25 0M158 214v17'/%3E%3C/g%3E%3C/svg%3E");
   background-size:260px 260px;
 }
+
 body:before{
-  content:"";position:fixed;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,rgba(255,250,243,.56),rgba(255,250,243,.72));
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(
+    180deg,
+    rgba(255,250,243,.56),
+    rgba(255,250,243,.72)
+  );
   z-index:-1;
 }
-.wrap{width:min(100%,700px);margin:auto;padding:28px 18px 50px}
-.profile{text-align:center;padding-top:4px}
+
+.wrap{
+  width:min(100%,700px);
+  margin:auto;
+  padding:28px 18px 50px
+}
+
+/* PROFILE */
+
+.profile{
+  text-align:center;
+  padding-top:4px
+}
+
 .avatar{
-  width:132px;height:132px;border-radius:50%;margin:auto;overflow:hidden;
-  background:#fff9ee;border:5px solid #fff;outline:2px solid #e4bd70;
+  width:132px;
+  height:132px;
+  border-radius:50%;
+  margin:auto;
+  overflow:hidden;
+  background:#fff9ee;
+  border:5px solid #fff;
+  outline:2px solid #e4bd70;
   box-shadow:0 10px 30px rgba(92,59,28,.14);
 }
-.avatar img{width:100%;height:100%;object-fit:cover;display:block}
-h1{font-family:Georgia,"Times New Roman",serif;font-size:38px;line-height:1.1;margin:20px 0 10px;color:var(--pink);letter-spacing:-.5px}
-.brand-heart{color:#e98288;font-size:.82em;margin-left:4px}
-.handle{display:inline-flex;margin:0 auto;color:var(--brown);font-size:15px}
-.handle a{display:inline-flex;align-items:center;gap:8px;color:inherit;text-decoration:none;background:rgba(255,255,255,.88);border:1px solid #eee0d5;border-radius:999px;padding:10px 17px;box-shadow:0 5px 16px rgba(70,44,28,.06)}
-.handle svg{color:#e4405f}
-.intro{font-size:16px;margin:15px 0 30px;color:#654b3c}
-.intro .heart{color:#e98288}
-.section-title{display:none}
-.categories{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block
+}
+
+h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:38px;
+  line-height:1.1;
+  margin:20px 0 10px;
+  color:var(--pink);
+  letter-spacing:-.5px
+}
+
+.brand-heart{
+  color:#e98288;
+  font-size:.82em;
+  margin-left:4px
+}
+
+.handle{
+  display:inline-flex;
+  margin:0 auto;
+  color:var(--brown);
+  font-size:15px
+}
+
+.handle a{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:inherit;
+  text-decoration:none;
+  background:rgba(255,255,255,.88);
+  border:1px solid #eee0d5;
+  border-radius:999px;
+  padding:10px 17px;
+  box-shadow:0 5px 16px rgba(70,44,28,.06)
+}
+
+.handle svg{
+  color:#e4405f
+}
+
+.intro{
+  font-size:16px;
+  margin:15px 0 30px;
+  color:#654b3c;
+  font-weight:500;
+}
+
+.intro .heart{
+  color:#e98288
+}
+
+/* CATEGORY HOME */
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px
+}
+
 .category{
-  position:relative;aspect-ratio:1/1;border:1px solid rgba(120,85,55,.11);border-radius:28px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
-  padding:20px;cursor:pointer;color:var(--brown);box-shadow:0 10px 28px rgba(74,50,33,.07);
-  transition:transform .2s,box-shadow .2s;overflow:hidden;
+  position:relative;
+  aspect-ratio:1/1;
+  border:1px solid rgba(120,85,55,.11);
+  border-radius:28px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  cursor:pointer;
+  color:var(--brown);
+  box-shadow:0 10px 28px rgba(74,50,33,.07);
+  transition:transform .2s,box-shadow .2s;
+  overflow:hidden;
   -webkit-tap-highlight-color:transparent;
 }
-.category:after{content:"";position:absolute;inset:0;border-radius:28px;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.42),rgba(255,255,255,0))}
-.category:hover{transform:translateY(-4px);box-shadow:0 15px 32px rgba(74,50,33,.12)}
-.category:nth-child(1){background:#fff0f0}
-.category:nth-child(2){background:#fff8df}
-.category:nth-child(3){background:#f1f8e9}
-.category:nth-child(4){background:#f7effc}
-.category-icon{
-  width:76px;height:76px;border-radius:50%;display:grid;place-items:center;margin-bottom:17px;
-  position:relative;z-index:1;background:rgba(255,255,255,.45);font-size:0;
+
+.category:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:28px;
+  pointer-events:none;
+  background:linear-gradient(
+    135deg,
+    rgba(255,255,255,.42),
+    rgba(255,255,255,0)
+  )
 }
-.category-icon svg{width:49px;height:49px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.category:nth-child(1) .category-icon{color:#df7d86}
-.category:nth-child(2) .category-icon{color:#d49c2f}
-.category:nth-child(3) .category-icon{color:#70a55b}
-.category:nth-child(4) .category-icon{color:#9673b8}
-.category-name{position:relative;z-index:1;font-size:19px;font-weight:800;line-height:1.2}
-.category-sub{position:relative;z-index:1;font-size:13px;color:#725f54;margin-top:9px;line-height:1.35;max-width:190px}
-.explore{position:relative;z-index:1;width:100%;margin-top:17px;border:0;border-radius:999px;padding:11px 14px;font-size:13px;font-weight:800;background:rgba(255,255,255,.46);color:inherit;cursor:pointer}
 
+.category:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 32px rgba(74,50,33,.12)
+}
 
-.panel{display:none;position:relative}.panel.active{display:block}.panel:before{content:"";position:absolute;inset:-8px -6px auto;height:130px;border-radius:30px;opacity:.7;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='120' viewBox='0 0 220 120'%3E%3Cg fill='none' stroke='%23cdbdad' stroke-width='1.7' opacity='.42'%3E%3Cpath d='M20 38c10-8 22-8 32 0-10 8-22 8-32 0z'/%3E%3Ccircle cx='26' cy='38' r='2'/%3E%3Cpath d='M165 25c0-10 8-17 18-17s18 7 18 17c0 12-18 25-18 25s-18-13-18-25z'/%3E%3Cpath d='M91 78c8-10 18-10 26 0-8 10-18 10-26 0z'/%3E%3Ccircle cx='103' cy='77' r='3'/%3E%3Cpath d='M136 90h30M151 75v30'/%3E%3C/g%3E%3C/svg%3E");background-position:right top;background-repeat:no-repeat}.panel-head{position:relative;z-index:2;display:flex;align-items:center;gap:12px;margin:3px 0 22px}.back{border:1px solid #eadfd5;background:rgba(255,255,255,.9);color:var(--brown);width:42px;height:42px;border-radius:14px;font-size:25px;cursor:pointer;box-shadow:0 5px 15px rgba(70,44,28,.06)}.panel-title{font-family:Georgia,"Times New Roman",serif;font-size:27px;font-weight:700}.panel-title:after{content:"";display:block;width:46px;height:3px;border-radius:10px;background:#e4a0a2;margin-top:7px}
-.product-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:18px}.product{position:relative;display:block;text-decoration:none;color:inherit;background:rgba(255,255,255,.94);border:1px solid rgba(120,85,55,.11);border-radius:28px;overflow:hidden;min-width:0;padding:0;box-shadow:0 9px 26px rgba(74,50,33,.08);transition:transform .18s,box-shadow .18s}.product:hover{transform:translateY(-2px);box-shadow:0 13px 34px rgba(74,50,33,.13)}.product:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:#e5a0a4;z-index:2}.product:nth-child(2):before{background:#d6aa54}.product:nth-child(3):before{background:#87ad70}.product:nth-child(4):before{background:#a78ac2}.product-row{display:block}.product-img-wrap{width:100%;height:320px;border-radius:0;overflow:hidden;background:rgba(255,255,255,.62);position:relative;border:0}.product-img-wrap:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.01),rgba(255,255,255,.12));pointer-events:none}.product-img{width:100%;height:100%;object-fit:cover;display:block;background:#f8f2eb}.product-body{padding:19px 24px 8px;display:flex;flex-direction:column;min-width:0}.product-name{font-weight:800;font-size:21px;line-height:1.28}.product-meta{font-size:15px;color:#8b776b;margin-top:5px}.buy{display:inline-flex;align-items:center;justify-content:center;gap:4px;width:max-content;margin:7px 24px 23px;padding:12px 18px;border-radius:17px;background:#222;color:#fff;font-size:15px;font-weight:800;white-space:nowrap;box-shadow:0 3px 10px rgba(40,30,25,.10)}.product-tag{display:inline-flex;align-self:flex-start;margin:0 0 6px;padding:5px 9px;border-radius:999px;background:rgba(255,255,255,.68);color:#9b6969;font-size:10px;font-weight:800;letter-spacing:.2px}.empty{position:relative;z-index:1;background:rgba(255,255,255,.9);border:1px solid #eadfd5;border-radius:28px;padding:40px 20px;text-align:center;box-shadow:0 9px 24px rgba(74,50,33,.07)}.empty-icon{font-size:38px;margin-bottom:8px}.empty-title{font-weight:800;font-size:18px}.empty-text{font-size:13px;color:#8b776b;margin-top:7px}.panel#mom-talks .product{background:#fff0f0}.panel#mom-talks .product:before{background:#df7d86}.panel#mom-talks .buy{background:#df7d86}.panel#baby-essentials .product{background:#f1f8e9}.panel#baby-essentials .product:before{background:#70a55b}.panel#baby-essentials .buy{background:#70a55b}.panel#pumping-essentials .product:nth-child(1){background:#f7effc}.panel#pumping-essentials .product:nth-child(2){background:#fff8df}.panel#pumping-essentials .product:nth-child(3){background:#eaf6f5}.panel#pumping-essentials .product:nth-child(1) .buy{background:#9673b8}.panel#pumping-essentials .product:nth-child(2) .buy{background:#d49c2f}.panel#pumping-essentials .product:nth-child(3) .buy{background:#5d9e99}
-.socials{text-align:center;margin-top:30px}.socials a{display:inline-flex;align-items:center;gap:7px;color:#725f54;text-decoration:none;font-size:14px}
-.footer{text-align:center;color:#806e63;font-size:13px;margin-top:32px}.footer .heart{color:#e98288}.developer-credit{margin-top:10px;font-size:12px;color:#9a887d}.developer-credit a{color:#7f6a5e;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(127,106,94,.28);transition:opacity .2s}.developer-credit a:hover{opacity:.7}
-@media(max-width:620px){.product-grid{grid-template-columns:1fr;gap:15px}.product-img-wrap{height:250px}.product-body{padding:16px 18px 6px}.product-name{font-size:18px}.product-meta{font-size:13px}.product-tag{font-size:9px;padding:4px 7px}.buy{font-size:13px;padding:10px 15px;margin:6px 18px 18px;border-radius:15px}.panel-title{font-size:24px}}
-@media(max-width:410px){.product-img-wrap{height:220px}.product-name{font-size:17px}.product-meta{font-size:12px}.buy{font-size:12px;padding:9px 14px}}
-@media(max-width:500px){h1{font-size:34px}.wrap{padding-top:24px}.categories{gap:13px}.category{border-radius:23px;padding:14px}.category-icon{width:65px;height:65px;margin-bottom:13px}.category-icon svg{width:43px;height:43px}.category-name{font-size:16px}.category-sub{font-size:11px}.explore{font-size:11px;padding:9px 10px;margin-top:12px}}
-@media(max-width:360px){.category-sub{display:none}.explore{margin-top:15px}.avatar{width:118px;height:118px}}
+.category:nth-child(1){
+  background:#fff0f0
+}
+
+.category:nth-child(2){
+  background:#fff8df
+}
+
+.category:nth-child(3){
+  background:#f1f8e9
+}
+
+.category:nth-child(4){
+  background:#f7effc
+}
+
+.category-icon{
+  width:76px;
+  height:76px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  margin-bottom:17px;
+  position:relative;
+  z-index:1;
+  background:rgba(255,255,255,.45);
+  font-size:0
+}
+
+.category-icon svg{
+  width:49px;
+  height:49px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round
+}
+
+.category:nth-child(1) .category-icon{
+  color:#df7d86
+}
+
+.category:nth-child(2) .category-icon{
+  color:#d49c2f
+}
+
+.category:nth-child(3) .category-icon{
+  color:#70a55b
+}
+
+.category:nth-child(4) .category-icon{
+  color:#9673b8
+}
+
+.category-name{
+  position:relative;
+  z-index:1;
+  font-size:19px;
+  font-weight:800;
+  line-height:1.2
+}
+
+.category-sub{
+  position:relative;
+  z-index:1;
+  font-size:13px;
+  color:#725f54;
+  margin-top:9px;
+  line-height:1.35;
+  max-width:190px
+}
+
+.explore{
+  position:relative;
+  z-index:1;
+  width:100%;
+  margin-top:17px;
+  border:0;
+  border-radius:999px;
+  padding:11px 14px;
+  font-size:13px;
+  font-weight:800;
+  background:rgba(255,255,255,.46);
+  color:inherit;
+  cursor:pointer
+}
+
+/* PANELS */
+
+.panel{
+  display:none;
+  position:relative
+}
+
+.panel.active{
+  display:block
+}
+
+.panel:before{
+  content:"";
+  position:absolute;
+  inset:-8px -6px auto;
+  height:130px;
+  border-radius:30px;
+  opacity:.7;
+  pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='120' viewBox='0 0 220 120'%3E%3Cg fill='none' stroke='%23cdbdad' stroke-width='1.7' opacity='.42'%3E%3Cpath d='M20 38c10-8 22-8 32 0-10 8-22 8-32 0z'/%3E%3Ccircle cx='26' cy='38' r='2'/%3E%3Cpath d='M165 25c0-10 8-17 18-17s18 7 18 17c0 12-18 25-18 25s-18-13-18-25z'/%3E%3Cpath d='M91 78c8-10 18-10 26 0-8 10-18 10-26 0z'/%3E%3Ccircle cx='103' cy='77' r='3'/%3E%3Cpath d='M136 90h30M151 75v30'/%3E%3C/g%3E%3C/svg%3E");
+  background-position:right top;
+  background-repeat:no-repeat
+}
+
+.panel-head{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:3px 0 22px
+}
+
+.back{
+  border:1px solid #eadfd5;
+  background:rgba(255,255,255,.9);
+  color:var(--brown);
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  font-size:25px;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(70,44,28,.06)
+}
+
+.panel-title{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:27px;
+  font-weight:700
+}
+
+.panel-title:after{
+  content:"";
+  display:block;
+  width:46px;
+  height:3px;
+  border-radius:10px;
+  background:#e4a0a2;
+  margin-top:7px
+}
+
+/* MINIMAL PRODUCT CARDS */
+
+.product-grid{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px
+}
+
+.product{
+  position:relative;
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  border:1px solid rgba(120,85,55,.10);
+  border-radius:22px;
+  overflow:hidden;
+  min-width:0;
+  padding:0;
+  box-shadow:0 7px 22px rgba(74,50,33,.06);
+  transition:transform .18s,box-shadow .18s
+}
+
+.product:hover{
+  transform:translateY(-2px);
+  box-shadow:0 11px 28px rgba(74,50,33,.10)
+}
+
+.product:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:5px;
+  background:#e5a0a4;
+  z-index:2
+}
+
+.product:nth-child(2):before{
+  background:#d6aa54
+}
+
+.product:nth-child(3):before{
+  background:#87ad70
+}
+
+.product:nth-child(4):before{
+  background:#a78ac2
+}
+
+.product-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:22px 20px 22px 25px
+}
+
+.product-body{
+  min-width:0;
+  flex:1
+}
+
+.product-name{
+  font-weight:800;
+  font-size:19px;
+  line-height:1.3
+}
+
+.product-meta{
+  font-size:14px;
+  color:#8b776b;
+  margin-top:6px;
+  line-height:1.4
+}
+
+.product-tag{
+  display:inline-flex;
+  margin-bottom:8px;
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(255,255,255,.7);
+  color:#9b6969;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.3px
+}
+
+.buy{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  flex-shrink:0;
+  padding:11px 15px;
+  border-radius:14px;
+  background:#222;
+  color:#fff;
+  font-size:13px;
+  font-weight:800;
+  white-space:nowrap;
+  box-shadow:0 3px 10px rgba(40,30,25,.08)
+}
+
+/* CATEGORY COLORS */
+
+.panel#mom-talks .product{
+  background:#fff0f0
+}
+
+.panel#mom-talks .product:before{
+  background:#df7d86
+}
+
+.panel#mom-talks .buy{
+  background:#df7d86
+}
+
+.panel#baby-essentials .product{
+  background:#f1f8e9
+}
+
+.panel#baby-essentials .product:before{
+  background:#70a55b
+}
+
+.panel#baby-essentials .buy{
+  background:#70a55b
+}
+
+.panel#pumping-essentials .product:nth-child(1){
+  background:#f7effc
+}
+
+.panel#pumping-essentials .product:nth-child(2){
+  background:#fff8df
+}
+
+.panel#pumping-essentials .product:nth-child(3){
+  background:#eaf6f5
+}
+
+.panel#pumping-essentials .product:nth-child(1) .buy{
+  background:#9673b8
+}
+
+.panel#pumping-essentials .product:nth-child(2) .buy{
+  background:#d49c2f
+}
+
+.panel#pumping-essentials .product:nth-child(3) .buy{
+  background:#5d9e99
+}
+
+/* EMPTY */
+
+.empty{
+  position:relative;
+  z-index:1;
+  background:rgba(255,255,255,.9);
+  border:1px solid #eadfd5;
+  border-radius:28px;
+  padding:40px 20px;
+  text-align:center;
+  box-shadow:0 9px 24px rgba(74,50,33,.07)
+}
+
+.empty-icon{
+  font-size:38px;
+  margin-bottom:8px
+}
+
+.empty-title{
+  font-weight:800;
+  font-size:18px
+}
+
+.empty-text{
+  font-size:13px;
+  color:#8b776b;
+  margin-top:7px
+}
+
+/* SOCIAL + FOOTER */
+
+.socials{
+  text-align:center;
+  margin-top:30px
+}
+
+.socials a{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:#725f54;
+  text-decoration:none;
+  font-size:14px
+}
+
+.footer{
+  text-align:center;
+  color:#806e63;
+  font-size:13px;
+  margin-top:32px
+}
+
+.footer .heart{
+  color:#e98288
+}
+
+/* MOBILE */
+
+@media(max-width:620px){
+
+  .product-grid{
+    grid-template-columns:1fr;
+    gap:12px
+  }
+
+  .product-row{
+    padding:19px 16px 19px 21px;
+    gap:12px
+  }
+
+  .product-name{
+    font-size:17px
+  }
+
+  .product-meta{
+    font-size:12px
+  }
+
+  .product-tag{
+    font-size:8px;
+    padding:4px 7px
+  }
+
+  .buy{
+    font-size:12px;
+    padding:9px 12px;
+    border-radius:12px
+  }
+
+  .panel-title{
+    font-size:24px
+  }
+}
+
+@media(max-width:500px){
+
+  h1{
+    font-size:34px
+  }
+
+  .wrap{
+    padding-top:24px
+  }
+
+  .categories{
+    gap:13px
+  }
+
+  .category{
+    border-radius:23px;
+    padding:14px
+  }
+
+  .category-icon{
+    width:65px;
+    height:65px;
+    margin-bottom:13px
+  }
+
+  .category-icon svg{
+    width:43px;
+    height:43px
+  }
+
+  .category-name{
+    font-size:16px
+  }
+
+  .category-sub{
+    font-size:11px
+  }
+
+  .explore{
+    font-size:11px;
+    padding:9px 10px;
+    margin-top:12px
+  }
+}
+
+@media(max-width:400px){
+
+  .product-row{
+    align-items:flex-start
+  }
+
+  .buy{
+    margin-top:4px
+  }
+}
+
+@media(max-width:360px){
+
+  .category-sub{
+    display:none
+  }
+
+  .explore{
+    margin-top:15px
+  }
+
+  .avatar{
+    width:118px;
+    height:118px
+  }
+}
 </style>
 </head>
+
 <body>
+
 <main class="wrap">
+
 <section class="profile">
-  <div class="avatar"><img src="profile.png" alt="Kanmani and baby"></div>
-  <h1>Kanmani Finds <span class="brand-heart">♥</span></h1>
+
+  <div class="avatar">
+    <img src="profile.png" alt="Kanmani and baby">
+  </div>
+
+  <h1>
+    Kanmani Finds
+    <span class="brand-heart">♥</span>
+  </h1>
+
   <div class="handle">
-    <a href="https://www.instagram.com/kanmani.vishal/" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram @kanmani.vishal">
-      <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.7" r="1.1" fill="currentColor"/></svg>
+    <a href="https://www.instagram.com/kanmani.vishal/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Open Instagram @kanmani.vishal">
+
+      <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"
+              fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="12" r="4.2"
+                fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="17.5" cy="6.7" r="1.1" fill="currentColor"/>
+      </svg>
+
       @kanmani.vishal
     </a>
   </div>
-  <p class="intro">Curated with love for you &amp; your little one <span class="heart">♥</span></p>
+
+  <p class="intro">
+    Handpicked by a mom, from real experience
+    <span class="heart">❤️</span>
+  </p>
+
 </section>
+
 
 <section id="home">
+
   <div class="categories">
-    <button class="category" onclick="openPanel('mom-talks')" aria-label="Open 1:1 Mom Talks">
+
+    <!-- MOM TALKS -->
+
+    <button class="category"
+            onclick="openPanel('mom-talks')"
+            aria-label="Open 1:1 Mom Talks">
+
       <div class="category-icon">
-        <svg viewBox="0 0 64 64"><circle cx="32" cy="19" r="8"/><path d="M17 46c1-10 7-16 15-16s14 6 15 16"/><circle cx="39" cy="38" r="7"/><path d="M27 51c2-8 6-12 12-12 5 0 9 4 11 12"/><path d="M49 20l2 4 4 .5-3 3 .7 4.5-3.7-2-3.7 2 .7-4.5-3-3 4-.5z"/></svg>
+
+        <svg viewBox="0 0 64 64">
+          <circle cx="32" cy="19" r="8"/>
+          <path d="M17 46c1-10 7-16 15-16s14 6 15 16"/>
+          <circle cx="39" cy="38" r="7"/>
+          <path d="M27 51c2-8 6-12 12-12 5 0 9 4 11 12"/>
+          <path d="M49 20l2 4 4 .5-3 3 .7 4.5-3.7-2-3.7 2 .7-4.5-3-3 4-.5z"/>
+        </svg>
+
       </div>
-      <div class="category-name">1:1 Mom Talks</div>
-      <div class="category-sub">Personal guidance &amp; support just for you</div>
-      <div class="explore">Explore Now&nbsp; ›</div>
+
+      <div class="category-name">
+        1:1 Mom Talks
+      </div>
+
+      <div class="category-sub">
+        Pumping guidance from a mom to a mom
+      </div>
+
+      <div class="explore">
+        View Finds&nbsp; ›
+      </div>
+
     </button>
-<button class="category" onclick="openPanel('pumping-essentials')" aria-label="Open Pumping Essentials">
+
+
+    <!-- PUMPING -->
+
+    <button class="category"
+            onclick="openPanel('pumping-essentials')"
+            aria-label="Open Pumping Essentials">
+
       <div class="category-icon">
-        <svg viewBox="0 0 64 64"><path d="M18 18h17v29H18z"/><path d="M22 18v-5h9v5M22 25h9M22 32h9"/><path d="M42 24c-5 0-8 4-8 8 0 5 4 9 8 9s8-4 8-9c0-4-3-8-8-8z"/><path d="M50 32h5M47 42l5 7"/></svg>
+
+        <svg viewBox="0 0 64 64">
+          <path d="M18 18h17v29H18z"/>
+          <path d="M22 18v-5h9v5"/>
+          <path d="M22 25h9M22 32h9"/>
+          <path d="M42 24c-5 0-8 4-8 8 0 5 4 9 8 9s8-4 8-9c0-4-3-8-8-8z"/>
+          <path d="M50 32h5M47 42l5 7"/>
+        </svg>
+
       </div>
-      <div class="category-name">Pumping Essentials</div>
-      <div class="category-sub">Everything you need for a smoother journey</div>
-      <div class="explore">Explore Now&nbsp; ›</div>
+
+      <div class="category-name">
+        Pumping Essentials
+      </div>
+
+      <div class="category-sub">
+        Everything you need for a smoother journey
+      </div>
+
+      <div class="explore">
+        View Finds&nbsp; ›
+      </div>
+
     </button>
-<button class="category" onclick="openPanel('baby-essentials')" aria-label="Open Baby Essentials">
+
+
+    <!-- BABY -->
+
+    <button class="category"
+            onclick="openPanel('baby-essentials')"
+            aria-label="Open Baby Essentials">
+
       <div class="category-icon">
-        <svg viewBox="0 0 64 64"><circle cx="32" cy="34" r="19"/><path d="M25 30h1M38 30h1M26 40c4 4 8 4 12 0"/><path d="M27 15c2-7 10-8 12-1"/><path d="M31 14c3-3 6-2 8 1"/></svg>
+
+        <svg viewBox="0 0 64 64">
+          <circle cx="32" cy="34" r="19"/>
+          <path d="M25 30h1M38 30h1M26 40c4 4 8 4 12 0"/>
+          <path d="M27 15c2-7 10-8 12-1"/>
+          <path d="M31 14c3-3 6-2 8 1"/>
+        </svg>
+
       </div>
-      <div class="category-name">Baby Essentials</div>
-      <div class="category-sub">Carefully picked for your baby</div>
-      <div class="explore">Explore Now&nbsp; ›</div>
+
+      <div class="category-name">
+        Baby Essentials
+      </div>
+
+      <div class="category-sub">
+        Every baby deserves the best
+      </div>
+
+      <div class="explore">
+        View Finds&nbsp; ›
+      </div>
+
     </button>
-<button class="category" onclick="openPanel('mom-essentials')" aria-label="Open Mom Essentials">
+
+
+    <!-- MOM ESSENTIALS -->
+
+    <button class="category"
+            onclick="openPanel('mom-essentials')"
+            aria-label="Open Mom Essentials">
+
       <div class="category-icon">
-        <svg viewBox="0 0 64 64"><path d="M17 24h30l-3 30H20z"/><path d="M24 24c0-7 3-11 8-11s8 4 8 11"/><path d="M32 36c4-7 12-2 7 4-2 3-7 6-7 6s-5-3-7-6c-5-6 3-11 7-4z"/></svg>
+
+        <svg viewBox="0 0 64 64">
+          <path d="M17 24h30l-3 30H20z"/>
+          <path d="M24 24c0-7 3-11 8-11s8 4 8 11"/>
+          <path d="M32 36c4-7 12-2 7 4-2 3-7 6-7 6s-5-3-7-6c-5-6 3-11 7-4z"/>
+        </svg>
+
       </div>
-      <div class="category-name">Mom Essentials</div>
-      <div class="category-sub">No products uploaded yet</div>
-      <div class="explore">Explore&nbsp; ›</div>
+
+      <div class="category-name">
+        Mom Essentials
+      </div>
+
+      <div class="category-sub">
+        Thoughtfully picked
+      </div>
+
+      <div class="explore">
+        View Finds&nbsp; ›
+      </div>
+
     </button>
+
   </div>
+
 </section>
+
+
+<!-- 1:1 MOM TALKS -->
 
 <section id="mom-talks" class="panel">
-  <div class="panel-head"><button class="back" onclick="goHome()" aria-label="Back">‹</button><div class="panel-title">1:1 Mom Talks</div></div>
-  <div class="product-grid">
-    <a class="product" href="https://topmate.io/kanmanivishal/2254556" target="_blank" rel="noopener noreferrer">
-      <div class="product-row"><div class="product-body"><span class="product-tag">PERSONAL SUPPORT</span><div class="product-name">Book a 1:1 Mom Talk</div><div class="product-meta">A personal session with Kanmani</div></div><span class="buy">Book a Session&nbsp; →</span></div>
-    </a>
+
+  <div class="panel-head">
+    <button class="back" onclick="goHome()" aria-label="Back">‹</button>
+    <div class="panel-title">1:1 Mom Talks</div>
   </div>
+
+  <div class="product-grid">
+
+    <a class="product"
+       href="https://topmate.io/kanmanivishal/2254556"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <div class="product-row">
+
+        <div class="product-body">
+
+          <span class="product-tag">
+            PERSONAL SUPPORT
+          </span>
+
+          <div class="product-name">
+            Book a 1:1 Mom Talk
+          </div>
+
+          <div class="product-meta">
+            A personal session with Kanmani
+          </div>
+
+        </div>
+
+        <span class="buy">
+          Book a Session&nbsp; →
+        </span>
+
+      </div>
+
+    </a>
+
+  </div>
+
 </section>
+
+
+<!-- MOM ESSENTIALS -->
 
 <section id="mom-essentials" class="panel">
-  <div class="panel-head"><button class="back" onclick="goHome()" aria-label="Back">‹</button><div class="panel-title">Mom Essentials</div></div>
-  <div class="empty"><div class="empty-icon">🤍</div><div class="empty-title">No products uploaded yet</div><div class="empty-text">Useful mom essentials will be added here soon.</div></div>
+
+  <div class="panel-head">
+    <button class="back" onclick="goHome()" aria-label="Back">‹</button>
+    <div class="panel-title">Mom Essentials</div>
+  </div>
+
+  <div class="empty">
+
+    <div class="empty-icon">🤍</div>
+
+    <div class="empty-title">
+      No products uploaded yet
+    </div>
+
+    <div class="empty-text">
+      Useful mom essentials will be added here soon.
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- BABY ESSENTIALS -->
 
 <section id="baby-essentials" class="panel">
-  <div class="panel-head"><button class="back" onclick="goHome()" aria-label="Back">‹</button><div class="panel-title">Baby Essentials</div></div>
-  <div class="product-grid">
-    <a class="product" href="https://link.amazon/B03tFuFty" target="_blank" rel="noopener noreferrer">
-      <div class="product-row"><div class="product-img-wrap"><img class="product-img" src="https://www.firstcry.com/cdn-cgi/image/width=600,quality=85,format=auto/images/products/zoom/19026027zzsq.webp" alt="Baby electric nail cutter" onerror="this.onerror=null;this.src='https://www.luvlap.com/cdn/shop/files/19151_ElectricBabyNailTrimmer-1.jpg?v=1763132367';"></div><div class="product-body"><span class="product-tag">BABY CARE</span><div class="product-name">Baby Electric Nail Cutter</div><div class="product-meta">Carefully picked baby essential</div></div><span class="buy">View Product&nbsp; →</span></div>
-    </a>
-    <a class="product" href="https://shorturl.at/i7VSM" target="_blank" rel="noopener noreferrer">
-      <div class="product-row"><div class="product-img-wrap"><div class="product-placeholder">🍼</div></div><div class="product-body"><span class="product-tag">BABY FIND</span><div class="product-name">Budget baby buy - Clothing</div><div class="product-meta">Tap to view product</div></div><span class="buy">View Product&nbsp; →</span></div>
-    </a>
+
+  <div class="panel-head">
+    <button class="back" onclick="goHome()" aria-label="Back">‹</button>
+    <div class="panel-title">Baby Essentials</div>
   </div>
+
+  <div class="product-grid">
+
+    <a class="product"
+       href="https://link.amazon/B03tFuFty"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <div class="product-row">
+
+        <div class="product-body">
+
+          <span class="product-tag">
+            BABY CARE
+          </span>
+
+          <div class="product-name">
+            Baby Electric Nail Cutter
+          </div>
+
+          <div class="product-meta">
+            Carefully picked baby essential
+          </div>
+
+        </div>
+
+        <span class="buy">
+          View Product&nbsp; →
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <a class="product"
+       href="https://shorturl.at/i7VSM"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <div class="product-row">
+
+        <div class="product-body">
+
+          <span class="product-tag">
+            BABY FIND
+          </span>
+
+          <div class="product-name">
+            Budget Baby Buy – Clothing
+          </div>
+
+          <div class="product-meta">
+            A cute and practical everyday find
+          </div>
+
+        </div>
+
+        <span class="buy">
+          View Product&nbsp; →
+        </span>
+
+      </div>
+
+    </a>
+
+  </div>
+
 </section>
 
+
+<!-- PUMPING ESSENTIALS -->
+
 <section id="pumping-essentials" class="panel">
-  <div class="panel-head"><button class="back" onclick="goHome()" aria-label="Back">‹</button><div class="panel-title">Pumping Essentials</div></div>
-  <div class="product-grid">
-    <a class="product" href="https://link.amazon/B0a7Q24Q8" target="_blank" rel="noopener noreferrer">
-      <div class="product-row"><div class="product-img-wrap"><img class="product-img" src="https://image.made-in-china.com/155f0j00FGVCMfgRbopJ/Wholesale-PE-Printed-Galllon-Waterproof-Writable-Slider-Food-Storage-Freezer-Frozen-Self-Sealed-Reusable-Reclosable-Bolsa-Doypack-Zipper-Ziplock-Plastic-Bag.jpg" alt="Zip and slider bags" onerror="this.closest('.product-img-wrap').style.display='none'"></div><div class="product-body"><span class="product-tag">STORAGE</span><div class="product-name">Zip n Slider Bags</div><div class="product-meta">For organised milk storage</div></div><span class="buy">View Product&nbsp; →</span></div>
-    </a>
-    <a class="product" href="https://link.amazon/B0eYM5EFh" target="_blank" rel="noopener noreferrer">
-      <div class="product-row"><div class="product-img-wrap"><img class="product-img" src="https://www.price.com.hk/space/ec_product/shop/503000/503216_30doel_0.jpg" alt="Breast milk storage bags" onerror="this.closest('.product-img-wrap').style.display='none'"></div><div class="product-body"><span class="product-tag">MILK STORAGE</span><div class="product-name">Breast Milk Storage Bags</div><div class="product-meta">A handy pumping essential</div></div><span class="buy">View Product&nbsp; →</span></div>
-    </a>
-    <a class="product" href="https://link.amazon/B00ZBq3xx" target="_blank" rel="noopener noreferrer">
-      <div class="product-row"><div class="product-img-wrap"><img class="product-img" src="https://cdn.fcglcdn.com/brainbees/images/products/zoom/safe-o-kid-baby-breast-milk-storage-bags-pre-sterilized-leak-proof-19026027zzsq.webp" alt="Safe-O-Kid breast milk storage bag" onerror="this.closest('.product-img-wrap').style.display='none'"></div><div class="product-body"><span class="product-tag">SAFE-O-KID</span><div class="product-name">Safe-O-Kid Breastmilk Storage Bag</div><div class="product-meta">Pre-sterilised storage option</div></div><span class="buy">View Product&nbsp; →</span></div>
-    </a>
+
+  <div class="panel-head">
+    <button class="back" onclick="goHome()" aria-label="Back">‹</button>
+    <div class="panel-title">Pumping Essentials</div>
   </div>
+
+  <div class="product-grid">
+
+
+    <a class="product"
+       href="https://link.amazon/B0a7Q24Q8"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <div class="product-row">
+
+        <div class="product-body">
+
+          <span class="product-tag">
+            STORAGE
+          </span>
+
+          <div class="product-name">
+            Zip n Slider Bags
+          </div>
+
+          <div class="product-meta">
+            For organised milk storage
+          </div>
+
+        </div>
+
+        <span class="buy">
+          View Product&nbsp; →
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <a class="product"
+       href="https://link.amazon/B0eYM5EFh"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <div class="product-row">
+
+        <div class="product-body">
+
+          <span class="product-tag">
+            MILK STORAGE
+          </span>
+
+          <div class="product-name">
+            Breast Milk Storage Bags
+          </div>
+
+          <div class="product-meta">
+            A handy pumping essential
+          </div>
+
+        </div>
+
+        <span class="buy">
+          View Product&nbsp; →
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <a class="product"
+       href="https://link.amazon/B00ZBq3xx"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <div class="product-row">
+
+        <div class="product-body">
+
+          <span class="product-tag">
+            SAFE-O-KID
+          </span>
+
+          <div class="product-name">
+            Safe-O-Kid Breastmilk Storage Bag
+          </div>
+
+          <div class="product-meta">
+            Pre-sterilised storage option
+          </div>
+
+        </div>
+
+        <span class="buy">
+          View Product&nbsp; →
+        </span>
+
+      </div>
+
+    </a>
+
+  </div>
+
 </section>
-<div class="socials"><a href="https://www.instagram.com/kanmani.vishal/" target="_blank" rel="noopener noreferrer"><svg width="17" height="17" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.7" r="1.1" fill="currentColor"/></svg> Instagram</a></div>
-<div class="footer"><span class="heart">♥</span> Thank you for supporting <span class="heart">♥</span></div>
+
+
+<div class="socials">
+
+  <a href="https://www.instagram.com/kanmani.vishal/"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    <svg width="17" height="17" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5"
+            fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="4.2"
+              fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="17.5" cy="6.7" r="1.1"
+              fill="currentColor"/>
+    </svg>
+
+    Instagram
+
+  </a>
+
+</div>
+
+
+<div class="footer">
+  <span class="heart">♥</span>
+  Thank you for supporting
+  <span class="heart">♥</span>
+</div>
+
 </main>
+
+
 <script>
-function openPanel(id){document.getElementById('home').style.display='none';document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
-function goHome(){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.getElementById('home').style.display='block';window.scrollTo({top:0,behavior:'smooth'})}
+
+function openPanel(id){
+
+  document.getElementById('home').style.display='none';
+
+  document
+    .querySelectorAll('.panel')
+    .forEach(p=>p.classList.remove('active'));
+
+  document
+    .getElementById(id)
+    .classList.add('active');
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+}
+
+
+function goHome(){
+
+  document
+    .querySelectorAll('.panel')
+    .forEach(p=>p.classList.remove('active'));
+
+  document.getElementById('home').style.display='block';
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+}
+
 </script>
+
 </body>
 </html>
