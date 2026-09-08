@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -175,21 +176,10 @@ h1{
   box-shadow:0 15px 32px rgba(74,50,33,.12)
 }
 
-.category:nth-child(1){
-  background:#fff0f0
-}
-
-.category:nth-child(2){
-  background:#fff8df
-}
-
-.category:nth-child(3){
-  background:#f1f8e9
-}
-
-.category:nth-child(4){
-  background:#f7effc
-}
+.category:nth-child(1){background:#fff0f0}
+.category:nth-child(2){background:#fff8df}
+.category:nth-child(3){background:#f1f8e9}
+.category:nth-child(4){background:#f7effc}
 
 .category-icon{
   width:76px;
@@ -214,21 +204,10 @@ h1{
   stroke-linejoin:round
 }
 
-.category:nth-child(1) .category-icon{
-  color:#df7d86
-}
-
-.category:nth-child(2) .category-icon{
-  color:#d49c2f
-}
-
-.category:nth-child(3) .category-icon{
-  color:#70a55b
-}
-
-.category:nth-child(4) .category-icon{
-  color:#9673b8
-}
+.category:nth-child(1) .category-icon{color:#df7d86}
+.category:nth-child(2) .category-icon{color:#d49c2f}
+.category:nth-child(3) .category-icon{color:#70a55b}
+.category:nth-child(4) .category-icon{color:#9673b8}
 
 .category-name{
   position:relative;
@@ -364,17 +343,9 @@ h1{
   z-index:2
 }
 
-.product:nth-child(2):before{
-  background:#d6aa54
-}
-
-.product:nth-child(3):before{
-  background:#87ad70
-}
-
-.product:nth-child(4):before{
-  background:#a78ac2
-}
+.product:nth-child(2):before{background:#d6aa54}
+.product:nth-child(3):before{background:#87ad70}
+.product:nth-child(4):before{background:#a78ac2}
 
 .product-row{
   display:flex;
@@ -509,52 +480,27 @@ h1{
   margin-top:7px
 }
 
-/* SOCIAL LINKS */
+/* SOCIAL */
 
 .socials{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:30px;
-  margin-top:32px;
+  gap:24px;
+  margin-top:30px
 }
 
-.social-link{
+.socials a{
   display:inline-flex;
   align-items:center;
   gap:7px;
   color:#725f54;
   text-decoration:none;
-  font-size:14px;
-  transition:color .2s,transform .2s;
+  font-size:14px
 }
 
-.social-link:hover{
-  color:#4d3528;
-  transform:translateY(-2px);
-}
-
-.social-link svg{
-  width:19px;
-  height:19px;
-  fill:none;
-  stroke:currentColor;
-  stroke-width:1.8;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-}
-
-/* FOOTER */
-
-.footer{
-  text-align:center;
-  color:#806e63;
-  font-size:13px;
-  margin-top:32px
-}
-
-.footer .heart{
-  color:#e98288
+.socials a:hover{
+  color:var(--pink)
 }
 
 /* MOBILE */
@@ -640,7 +586,7 @@ h1{
   }
 
   .socials{
-    gap:24px;
+    gap:20px
   }
 }
 
@@ -669,16 +615,9 @@ h1{
     width:118px;
     height:118px
   }
-
-  .socials{
-    gap:18px;
-  }
-
-  .social-link{
-    font-size:13px;
-  }
 }
 </style>
+
 </head>
 
 <body>
@@ -697,21 +636,26 @@ h1{
   </h1>
 
   <div class="handle">
-    <a href="https://www.instagram.com/kanmani.vishal/"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Open Instagram @kanmani.vishal">
 
-      <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="3" y="3" width="18" height="18" rx="5"
-              fill="none" stroke="currentColor" stroke-width="2"/>
-        <circle cx="12" cy="12" r="4.2"
-                fill="none" stroke="currentColor" stroke-width="2"/>
-        <circle cx="17.5" cy="6.7" r="1.1" fill="currentColor"/>
-      </svg>
+```
+<a href="https://www.instagram.com/kanmani.vishal/"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Open Instagram @kanmani.vishal">
 
-      @kanmani.vishal
-    </a>
+  <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true">
+    <rect x="3" y="3" width="18" height="18" rx="5"
+          fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="12" cy="12" r="4.2"
+            fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="17.5" cy="6.7" r="1.1" fill="currentColor"/>
+  </svg>
+
+  @kanmani.vishal
+
+</a>
+```
+
   </div>
 
   <p class="intro">
@@ -721,406 +665,486 @@ h1{
 
 </section>
 
-
 <section id="home">
 
   <div class="categories">
 
-    <!-- MOM TALKS -->
+```
+<!-- MOM TALKS -->
 
-    <button class="category"
-            onclick="openPanel('mom-talks')"
-            aria-label="Open 1:1 Mom Talks">
+<button class="category"
+        onclick="openPanel('mom-talks')"
+        aria-label="Open 1:1 Mom Talks">
 
-      <div class="category-icon">
+  <div class="category-icon">
 
-        <svg viewBox="0 0 64 64">
-          <circle cx="32" cy="19" r="8"/>
-          <path d="M17 46c1-10 7-16 15-16s14 6 15 16"/>
-          <circle cx="39" cy="38" r="7"/>
-          <path d="M27 51c2-8 6-12 12-12 5 0 9 4 11 12"/>
-          <path d="M49 20l2 4 4 .5-3 3 .7 4.5-3.7-2-3.7 2 .7-4.5-3-3 4-.5z"/>
-        </svg>
+    <svg viewBox="0 0 64 64">
+      <circle cx="32" cy="19" r="8"/>
+      <path d="M17 46c1-10 7-16 15-16s14 6 15 16"/>
+      <circle cx="39" cy="38" r="7"/>
+      <path d="M27 51c2-8 6-12 12-12 5 0 9 4 11 12"/>
+      <path d="M49 20l2 4 4 .5-3 3 .7 4.5-3.7-2-3.7 2 .7-4.5-3-3 4-.5z"/>
+    </svg>
 
-      </div>
+  </div>
 
-      <div class="category-name">
-        1:1 Mom Talks
-      </div>
+  <div class="category-name">
+    1:1 Mom Talks
+  </div>
 
-      <div class="category-sub">
-        Pumping guidance from a mom to a mom
-      </div>
+  <div class="category-sub">
+    Pumping guidance from a mom to a mom
+  </div>
 
-      <div class="explore">
-        View Finds&nbsp; ›
-      </div>
+  <div class="explore">
+    View Finds&nbsp; ›
+  </div>
 
-    </button>
-
-
-    <!-- PUMPING -->
-
-    <button class="category"
-            onclick="openPanel('pumping-essentials')"
-            aria-label="Open Pumping Essentials">
-
-      <div class="category-icon">
-
-        <svg viewBox="0 0 64 64">
-          <path d="M18 18h17v29H18z"/>
-          <path d="M22 18v-5h9v5"/>
-          <path d="M22 25h9M22 32h9"/>
-          <path d="M42 24c-5 0-8 4-8 8 0 5 4 9 8 9s8-4 8-9c0-4-3-8-8-8z"/>
-          <path d="M50 32h5M47 42l5 7"/>
-        </svg>
-
-      </div>
-
-      <div class="category-name">
-        Pumping Essentials
-      </div>
-
-      <div class="category-sub">
-        Everything you need for a smoother journey
-      </div>
-
-      <div class="explore">
-        View Finds&nbsp; ›
-      </div>
-
-    </button>
+</button>
 
 
-    <!-- BABY -->
+<!-- PUMPING -->
 
-    <button class="category"
-            onclick="openPanel('baby-essentials')"
-            aria-label="Open Baby Essentials">
+<button class="category"
+        onclick="openPanel('pumping-essentials')"
+        aria-label="Open Pumping Essentials">
 
-      <div class="category-icon">
+  <div class="category-icon">
 
-        <svg viewBox="0 0 64 64">
-          <circle cx="32" cy="34" r="19"/>
-          <path d="M25 30h1M38 30h1M26 40c4 4 8 4 12 0"/>
-          <path d="M27 15c2-7 10-8 12-1"/>
-          <path d="M31 14c3-3 6-2 8 1"/>
-        </svg>
+    <svg viewBox="0 0 64 64">
+      <path d="M18 18h17v29H18z"/>
+      <path d="M22 18v-5h9v5"/>
+      <path d="M22 25h9M22 32h9"/>
+      <path d="M42 24c-5 0-8 4-8 8 0 5 4 9 8 9s8-4 8-9c0-4-3-8-8-8z"/>
+      <path d="M50 32h5M47 42l5 7"/>
+    </svg>
 
-      </div>
+  </div>
 
-      <div class="category-name">
-        Baby Essentials
-      </div>
+  <div class="category-name">
+    Pumping Essentials
+  </div>
 
-      <div class="category-sub">
-        Every baby deserves the best
-      </div>
+  <div class="category-sub">
+    Everything you need for a smoother journey
+  </div>
 
-      <div class="explore">
-        View Finds&nbsp; ›
-      </div>
+  <div class="explore">
+    View Finds&nbsp; ›
+  </div>
 
-    </button>
+</button>
 
 
-    <!-- MOM ESSENTIALS -->
+<!-- BABY -->
 
-    <button class="category"
-            onclick="openPanel('mom-essentials')"
-            aria-label="Open Mom Essentials">
+<button class="category"
+        onclick="openPanel('baby-essentials')"
+        aria-label="Open Baby Essentials">
 
-      <div class="category-icon">
+  <div class="category-icon">
 
-        <svg viewBox="0 0 64 64">
-          <path d="M17 24h30l-3 30H20z"/>
-          <path d="M24 24c0-7 3-11 8-11s8 4 8 11"/>
-          <path d="M32 36c4-7 12-2 7 4-2 3-7 6-7 6s-5-3-7-6c-5-6 3-11 7-4z"/>
-        </svg>
+    <svg viewBox="0 0 64 64">
+      <circle cx="32" cy="34" r="19"/>
+      <path d="M25 30h1M38 30h1M26 40c4 4 8 4 12 0"/>
+      <path d="M27 15c2-7 10-8 12-1"/>
+      <path d="M31 14c3-3 6-2 8 1"/>
+    </svg>
 
-      </div>
+  </div>
 
-      <div class="category-name">
-        Mom Essentials
-      </div>
+  <div class="category-name">
+    Baby Essentials
+  </div>
 
-      <div class="category-sub">
-        Thoughtfully picked
-      </div>
+  <div class="category-sub">
+    Every baby deserves the best
+  </div>
 
-      <div class="explore">
-        View Finds&nbsp; ›
-      </div>
+  <div class="explore">
+    View Finds&nbsp; ›
+  </div>
 
-    </button>
+</button>
+
+
+<!-- MOM ESSENTIALS -->
+
+<button class="category"
+        onclick="openPanel('mom-essentials')"
+        aria-label="Open Mom Essentials">
+
+  <div class="category-icon">
+
+    <svg viewBox="0 0 64 64">
+      <path d="M17 24h30l-3 30H20z"/>
+      <path d="M24 24c0-7 3-11 8-11s8 4 8 11"/>
+      <path d="M32 36c4-7 12-2 7 4-2 3-7 6-7 6s-5-3-7-6c-5-6 3-11 7-4z"/>
+    </svg>
+
+  </div>
+
+  <div class="category-name">
+    Mom Essentials
+  </div>
+
+  <div class="category-sub">
+    Thoughtfully picked
+  </div>
+
+  <div class="explore">
+    View Finds&nbsp; ›
+  </div>
+
+</button>
+```
 
   </div>
 
 </section>
-
 
 <!-- 1:1 MOM TALKS -->
 
 <section id="mom-talks" class="panel">
 
   <div class="panel-head">
-    <button class="back" onclick="goHome()" aria-label="Back">‹</button>
-    <div class="panel-title">1:1 Mom Talks</div>
+
+```
+<button class="back"
+        onclick="goHome()"
+        aria-label="Back">‹</button>
+
+<div class="panel-title">
+  1:1 Mom Talks
+</div>
+```
+
   </div>
 
   <div class="product-grid">
 
-    <a class="product"
-       href="https://topmate.io/kanmanivishal/2254556"
-       target="_blank"
-       rel="noopener noreferrer">
+```
+<a class="product"
+   href="https://topmate.io/kanmanivishal/2254556"
+   target="_blank"
+   rel="noopener noreferrer">
 
-      <div class="product-row">
+  <div class="product-row">
 
-        <div class="product-body">
+    <div class="product-body">
 
-          <span class="product-tag">
-            PERSONAL SUPPORT
-          </span>
+      <span class="product-tag">
+        PERSONAL SUPPORT
+      </span>
 
-          <div class="product-name">
-            Book a 1:1 Mom Talk
-          </div>
-
-          <div class="product-meta">
-            A personal session with Kanmani
-          </div>
-
-        </div>
-
-        <span class="buy">
-          Book a Session&nbsp; →
-        </span>
-
+      <div class="product-name">
+        Book a 1:1 Mom Talk
       </div>
 
-    </a>
+      <div class="product-meta">
+        A personal session with Kanmani
+      </div>
+
+    </div>
+
+    <span class="buy">
+      Book a Session&nbsp; →
+    </span>
+
+  </div>
+
+</a>
+```
 
   </div>
 
 </section>
-
 
 <!-- MOM ESSENTIALS -->
 
 <section id="mom-essentials" class="panel">
 
   <div class="panel-head">
-    <button class="back" onclick="goHome()" aria-label="Back">‹</button>
-    <div class="panel-title">Mom Essentials</div>
+
+```
+<button class="back"
+        onclick="goHome()"
+        aria-label="Back">‹</button>
+
+<div class="panel-title">
+  Mom Essentials
+</div>
+```
+
   </div>
 
   <div class="empty">
 
-    <div class="empty-icon">🤍</div>
+```
+<div class="empty-icon">
+  🤍
+</div>
 
-    <div class="empty-title">
-      No products uploaded yet
-    </div>
+<div class="empty-title">
+  No products uploaded yet
+</div>
 
-    <div class="empty-text">
-      Useful mom essentials will be added here soon.
-    </div>
+<div class="empty-text">
+  Useful mom essentials will be added here soon.
+</div>
+```
 
   </div>
 
 </section>
-
 
 <!-- BABY ESSENTIALS -->
 
 <section id="baby-essentials" class="panel">
 
   <div class="panel-head">
-    <button class="back" onclick="goHome()" aria-label="Back">‹</button>
-    <div class="panel-title">Baby Essentials</div>
+
+```
+<button class="back"
+        onclick="goHome()"
+        aria-label="Back">‹</button>
+
+<div class="panel-title">
+  Baby Essentials
+</div>
+```
+
   </div>
 
   <div class="product-grid">
 
-    <a class="product"
-       href="https://link.amazon/B03tFuFty"
-       target="_blank"
-       rel="noopener noreferrer">
+```
+<!-- EXISTING PRODUCT -->
 
-      <div class="product-row">
+<a class="product"
+   href="https://link.amazon/B03tFuFty"
+   target="_blank"
+   rel="noopener noreferrer">
 
-        <div class="product-body">
+  <div class="product-row">
 
-          <span class="product-tag">
-            BABY CARE
-          </span>
+    <div class="product-body">
 
-          <div class="product-name">
-            Baby Electric Nail Cutter
-          </div>
+      <span class="product-tag">
+        BABY CARE
+      </span>
 
-          <div class="product-meta">
-            Carefully picked baby essential
-          </div>
-
-        </div>
-
-        <span class="buy">
-          View Product&nbsp; →
-        </span>
-
+      <div class="product-name">
+        Baby Electric Nail Cutter
       </div>
 
-    </a>
-
-
-    <a class="product"
-       href="https://shorturl.at/i7VSM"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <div class="product-row">
-
-        <div class="product-body">
-
-          <span class="product-tag">
-            BABY FIND
-          </span>
-
-          <div class="product-name">
-            Budget Baby Buy – Clothing
-          </div>
-
-          <div class="product-meta">
-            A cute and practical everyday find
-          </div>
-
-        </div>
-
-        <span class="buy">
-          View Product&nbsp; →
-        </span>
-
+      <div class="product-meta">
+        Carefully picked baby essential
       </div>
 
-    </a>
+    </div>
+
+    <span class="buy">
+      View Product&nbsp; →
+    </span>
+
+  </div>
+
+</a>
+
+
+<!-- EXISTING PRODUCT -->
+
+<a class="product"
+   href="https://shorturl.at/i7VSM"
+   target="_blank"
+   rel="noopener noreferrer">
+
+  <div class="product-row">
+
+    <div class="product-body">
+
+      <span class="product-tag">
+        BABY FIND
+      </span>
+
+      <div class="product-name">
+        Budget Baby Buy – Clothing
+      </div>
+
+      <div class="product-meta">
+        A cute and practical everyday find
+      </div>
+
+    </div>
+
+    <span class="buy">
+      View Product&nbsp; →
+    </span>
+
+  </div>
+
+</a>
+
+
+<!-- NEW AMAZON PRODUCT -->
+
+<a class="product"
+   href="https://www.amazon.in/dp/B07NGZK891/ref=cm_sw_r_as_gl_api_gl_i_P3YW3PXFVZQA52KXYPWS?linkCode=ml1&tag=kanmanivish05-21&linkId=34d4e8118cc6b5677190516fe98275d6&ascsubtag=srctok-78b3105dfbb05890&btn_type=ss&btn_ref=srctok-78b3105dfbb05890"
+   target="_blank"
+   rel="noopener noreferrer">
+
+  <div class="product-row">
+
+    <div class="product-body">
+
+      <span class="product-tag">
+        BABY FIND
+      </span>
+
+      <div class="product-name">
+        Baby Essential
+      </div>
+
+      <div class="product-meta">
+        A useful baby find picked by Kanmani
+      </div>
+
+    </div>
+
+    <span class="buy">
+      View Product&nbsp; →
+    </span>
+
+  </div>
+
+</a>
+```
 
   </div>
 
 </section>
-
 
 <!-- PUMPING ESSENTIALS -->
 
 <section id="pumping-essentials" class="panel">
 
   <div class="panel-head">
-    <button class="back" onclick="goHome()" aria-label="Back">‹</button>
-    <div class="panel-title">Pumping Essentials</div>
+
+```
+<button class="back"
+        onclick="goHome()"
+        aria-label="Back">‹</button>
+
+<div class="panel-title">
+  Pumping Essentials
+</div>
+```
+
   </div>
 
   <div class="product-grid">
 
-    <a class="product"
-       href="https://link.amazon/B0a7Q24Q8"
-       target="_blank"
-       rel="noopener noreferrer">
+```
+<a class="product"
+   href="https://link.amazon/B0a7Q24Q8"
+   target="_blank"
+   rel="noopener noreferrer">
 
-      <div class="product-row">
+  <div class="product-row">
 
-        <div class="product-body">
+    <div class="product-body">
 
-          <span class="product-tag">
-            STORAGE
-          </span>
+      <span class="product-tag">
+        STORAGE
+      </span>
 
-          <div class="product-name">
-            Zip n Slider Bags
-          </div>
-
-          <div class="product-meta">
-            For organised milk storage
-          </div>
-
-        </div>
-
-        <span class="buy">
-          View Product&nbsp; →
-        </span>
-
+      <div class="product-name">
+        Zip n Slider Bags
       </div>
 
-    </a>
-
-
-    <a class="product"
-       href="https://link.amazon/B0eYM5EFh"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <div class="product-row">
-
-        <div class="product-body">
-
-          <span class="product-tag">
-            MILK STORAGE
-          </span>
-
-          <div class="product-name">
-            Breast Milk Storage Bags
-          </div>
-
-          <div class="product-meta">
-            A handy pumping essential
-          </div>
-
-        </div>
-
-        <span class="buy">
-          View Product&nbsp; →
-        </span>
-
+      <div class="product-meta">
+        For organised milk storage
       </div>
 
-    </a>
+    </div>
+
+    <span class="buy">
+      View Product&nbsp; →
+    </span>
+
+  </div>
+
+</a>
 
 
-    <a class="product"
-       href="https://link.amazon/B00ZBq3xx"
-       target="_blank"
-       rel="noopener noreferrer">
+<a class="product"
+   href="https://link.amazon/B0eYM5EFh"
+   target="_blank"
+   rel="noopener noreferrer">
 
-      <div class="product-row">
+  <div class="product-row">
 
-        <div class="product-body">
+    <div class="product-body">
 
-          <span class="product-tag">
-            SAFE-O-KID
-          </span>
+      <span class="product-tag">
+        MILK STORAGE
+      </span>
 
-          <div class="product-name">
-            Safe-O-Kid Breastmilk Storage Bag
-          </div>
-
-          <div class="product-meta">
-            Pre-sterilised storage option
-          </div>
-
-        </div>
-
-        <span class="buy">
-          View Product&nbsp; →
-        </span>
-
+      <div class="product-name">
+        Breast Milk Storage Bags
       </div>
 
-    </a>
+      <div class="product-meta">
+        A handy pumping essential
+      </div>
+
+    </div>
+
+    <span class="buy">
+      View Product&nbsp; →
+    </span>
+
+  </div>
+
+</a>
+
+
+<a class="product"
+   href="https://link.amazon/B00ZBq3xx"
+   target="_blank"
+   rel="noopener noreferrer">
+
+  <div class="product-row">
+
+    <div class="product-body">
+
+      <span class="product-tag">
+        SAFE-O-KID
+      </span>
+
+      <div class="product-name">
+        Safe-O-Kid Breastmilk Storage Bag
+      </div>
+
+      <div class="product-meta">
+        Pre-sterilised storage option
+      </div>
+
+    </div>
+
+    <span class="buy">
+      View Product&nbsp; →
+    </span>
+
+  </div>
+
+</a>
+```
 
   </div>
 
 </section>
-
 
 <!-- SOCIAL LINKS -->
 
@@ -1128,63 +1152,94 @@ h1{
 
   <!-- INSTAGRAM -->
 
-  <a class="social-link"
-     href="https://www.instagram.com/kanmani.vishal/"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Open Instagram @kanmani.vishal">
+<a href="https://www.instagram.com/kanmani.vishal/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Open Instagram">
 
-    <svg viewBox="0 0 24 24" aria-hidden="true">
+```
+<svg width="19"
+     height="19"
+     viewBox="0 0 24 24"
+     aria-hidden="true">
 
-      <rect x="3" y="3"
-            width="18"
-            height="18"
-            rx="5"/>
+  <rect x="3"
+        y="3"
+        width="18"
+        height="18"
+        rx="5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"/>
 
-      <circle cx="12"
-              cy="12"
-              r="4.2"/>
+  <circle cx="12"
+          cy="12"
+          r="4.2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"/>
 
-      <circle cx="17.5"
-              cy="6.7"
-              r="1"/>
+  <circle cx="17.5"
+          cy="6.7"
+          r="1"
+          fill="currentColor"/>
 
-    </svg>
+</svg>
 
-    Instagram
+Instagram
+```
 
   </a>
 
-
   <!-- YOUTUBE -->
 
-  <a class="social-link"
-     href="https://www.youtube.com/@Kanmani.vishal"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Open YouTube">
+<a href="https://www.youtube.com/@Kanmani.vishal"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Open YouTube">
 
-    <svg viewBox="0 0 24 24" aria-hidden="true">
+```
+<svg width="19"
+     height="19"
+     viewBox="0 0 24 24"
+     aria-hidden="true">
 
-      <rect x="2.5"
-            y="5"
-            width="19"
-            height="14"
-            rx="4"/>
+  <path
+    d="M20.8 5.2
+       C19.9 4.3 18.6 4 17.2 3.9
+       C14.2 3.7 9.8 3.7 6.8 3.9
+       C5.4 4 4.1 4.3 3.2 5.2
+       C2.3 6.1 2 7.4 1.9 8.8
+       C1.7 11 1.7 13 1.9 15.2
+       C2 16.6 2.3 17.9 3.2 18.8
+       C4.1 19.7 5.4 20 6.8 20.1
+       C9.8 20.3 14.2 20.3 17.2 20.1
+       C18.6 20 19.9 19.7 20.8 18.8
+       C21.7 17.9 22 16.6 22.1 15.2
+       C22.3 13 22.3 11 22.1 8.8
+       C22 7.4 21.7 6.1 20.8 5.2Z"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.8"
+    stroke-linejoin="round"/>
 
-      <path d="M10 9l5 3-5 3z"/>
+  <path
+    d="M10 8.5L16 12L10 15.5V8.5Z"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.8"
+    stroke-linejoin="round"/>
 
-    </svg>
+</svg>
 
-    YouTube
+YouTube
+```
 
   </a>
 
 </div>
 
-
 </main>
-
 
 <script>
 
