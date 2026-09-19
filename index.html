@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Kanmani Finds | @kanmani.vishal</title>
 <meta name="description" content="Kanmani Finds — mom talks, baby essentials and useful finds from @kanmani.vishal">
 
@@ -159,8 +159,9 @@ h1{
   width:56px;
   height:56px;
   border-radius:50%;
-  display:grid;
-  place-items:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   background:rgba(255,255,255,0.7);
   color:#df7d86;
   flex-shrink:0;
@@ -249,6 +250,7 @@ h1{
   flex-direction:column;
   align-items:center;
   justify-content:space-between;
+  width:100%;
 }
 
 .card:hover{
@@ -257,14 +259,24 @@ h1{
   background:#fff;
 }
 
+.card-top-content{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+}
+
 .card-icon{
   width:60px;
   height:60px;
   border-radius:50%;
-  display:grid;
-  place-items:center;
-  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 12px auto;
   background:rgba(255,255,255,0.7);
+  flex-shrink:0;
 }
 
 .card-icon svg{
@@ -275,6 +287,7 @@ h1{
   stroke-width:2;
   stroke-linecap:round;
   stroke-linejoin:round;
+  display:block;
 }
 
 .card:nth-child(1) .card-icon{ color:#d49c2f; }
@@ -287,6 +300,8 @@ h1{
   color:var(--brown);
   line-height:1.2;
   margin-bottom:6px;
+  text-align:center;
+  width:100%;
 }
 
 .card-sub{
@@ -294,6 +309,8 @@ h1{
   color:#725f54;
   line-height:1.35;
   margin-bottom:14px;
+  text-align:center;
+  width:100%;
 }
 
 .view-finds-btn{
@@ -306,6 +323,7 @@ h1{
   border-radius:99px;
   transition:all .2s;
   display:inline-block;
+  margin-top:auto;
 }
 
 .card:hover .view-finds-btn{
@@ -340,8 +358,9 @@ h1{
   font-size:25px;
   cursor:pointer;
   box-shadow:0 5px 15px rgba(70,44,28,.06);
-  display:grid;
-  place-items:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .panel-title{
@@ -482,10 +501,28 @@ h1{
 }
 
 @media(max-width:560px){
-  .grid{ grid-template-columns:1fr; }
-  .card{ flex-direction:column; text-align:center; padding:20px 16px; }
-  .card-icon{ margin-bottom:12px; margin-right:0; }
-  .view-finds-btn{ width:100%; text-align:center; }
+  .grid{ 
+    grid-template-columns:1fr; 
+  }
+  .card{ 
+    flex-direction:column; 
+    align-items:center;
+    justify-content:center;
+    text-align:center; 
+    padding:20px 16px; 
+  }
+  .card-top-content{
+    align-items:center;
+    justify-content:center;
+  }
+  .card-icon{ 
+    margin:0 auto 12px auto; 
+  }
+  .view-finds-btn{ 
+    width:auto; 
+    text-align:center; 
+    margin-top:4px;
+  }
 }
 </style>
 </head>
@@ -498,7 +535,7 @@ h1{
   <header class="profile">
     <div class="avatar-wrapper">
       <div class="avatar">
-        <img src="profile.png" alt="Kanmani">
+        <img src="profile.png" alt="Kanmani" onerror="this.src='https://placehold.co/120x120/ffe3e5/4d3528?text=Kanmani'">
       </div>
       <div class="verified-badge">♥</div>
     </div>
@@ -547,7 +584,7 @@ h1{
 
       <!-- PUMPING ESSENTIALS -->
       <div class="card" onclick="openPanel('pumping-essentials')">
-        <div>
+        <div class="card-top-content">
           <div class="card-icon">
             <svg viewBox="0 0 64 64">
               <path d="M18 18h17v29H18z"/>
@@ -565,7 +602,7 @@ h1{
 
       <!-- BABY ESSENTIALS -->
       <div class="card" onclick="openPanel('baby-essentials')">
-        <div>
+        <div class="card-top-content">
           <div class="card-icon">
             <svg viewBox="0 0 64 64">
               <circle cx="32" cy="34" r="19"/>
@@ -582,7 +619,7 @@ h1{
 
       <!-- MOM ESSENTIALS -->
       <div class="card" onclick="openPanel('mom-essentials')">
-        <div>
+        <div class="card-top-content">
           <div class="card-icon">
             <svg viewBox="0 0 64 64">
               <path d="M17 24h30l-3 30H20z"/>
