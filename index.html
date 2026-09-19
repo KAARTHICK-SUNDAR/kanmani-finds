@@ -20,8 +20,6 @@
   --purple: #926fb3;
   --card-bg: rgba(255, 255, 255, 0.85);
   --border-color: rgba(220, 200, 190, 0.4);
-  --doodle-opacity: 0.08;
-  --doodle-color: %23a28678;
   --item-bg: #ffffff;
   --btn-buy-bg: #222222;
   --btn-buy-color: #ffffff;
@@ -32,11 +30,8 @@
   --brown: #f3eae3;
   --muted: #b8a69b;
   --pink: #ea8a92;
-  --pink-light: #332022;
-  --card-bg: rgba(42, 34, 30, 0.85);
-  --border-color: rgba(90, 75, 65, 0.5);
-  --doodle-opacity: 0.05;
-  --doodle-color: %23ffffff;
+  --card-bg: rgba(38, 30, 26, 0.88);
+  --border-color: rgba(100, 80, 70, 0.5);
   --item-bg: #28211c;
   --btn-buy-bg: #ea8a92;
   --btn-buy-color: #1e1916;
@@ -50,9 +45,9 @@ body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   color:var(--brown);
   background-color:var(--cream);
-  /* DOODLE WATERMARK BACKGROUND PATTERN */
+  /* ORIGINAL DOODLE WATERMARK BACKGROUND PATTERN PRESERVED */
   background-image: 
-    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='var(--doodle-color)' fill-opacity='0.08'%3E%3Cpath d='M20 20c2-4 6-4 8 0c2 4-2 8-4 10c-2-2-6-6-4-10z'/%3E%3Cpath d='M80 30a5 5 0 1 0 0-10a5 5 0 0 0 0 10z'/%3E%3Cpath d='M40 80c0-5 6-8 10-4c4 4 1 10-4 10c-5 0-6-3-6-6z'/%3E%3Cpath d='M95 85l3 6l6 1l-4.5 4.5l1 6.5l-5.5-3l-5.5 3l1-6.5l-4.5-4.5l6-1z'/%3E%3Ccircle cx='15' cy='95' r='3'/%3E%3Ccircle cx='105' cy='15' r='4'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a28678' fill-opacity='0.08'%3E%3Cpath d='M20 20c2-4 6-4 8 0c2 4-2 8-4 10c-2-2-6-6-4-10z'/%3E%3Cpath d='M80 30a5 5 0 1 0 0-10a5 5 0 0 0 0 10z'/%3E%3Cpath d='M40 80c0-5 6-8 10-4c4 4 1 10-4 10c-5 0-6-3-6-6z'/%3E%3Cpath d='M95 85l3 6l6 1l-4.5 4.5l1 6.5l-5.5-3l-5.5 3l1-6.5l-4.5-4.5l6-1z'/%3E%3Ccircle cx='15' cy='95' r='3'/%3E%3Ccircle cx='105' cy='15' r='4'/%3E%3C/g%3E%3C/svg%3E"),
     radial-gradient(circle at 10% 10%, rgba(255, 227, 229, 0.15) 0%, transparent 40%),
     radial-gradient(circle at 90% 90%, rgba(255, 241, 214, 0.15) 0%, transparent 40%);
   background-attachment:fixed;
@@ -66,7 +61,7 @@ body{
   position:relative;
 }
 
-/* DARK MODE TOGGLE */
+/* TOP NAV WITH DARK MODE TOGGLE */
 .top-nav {
   display: flex;
   justify-content: flex-end;
