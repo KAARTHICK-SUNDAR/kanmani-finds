@@ -151,6 +151,7 @@ h1{
   padding:20px;
   cursor:pointer;
   color:var(--brown);
+  text-decoration:none;
   box-shadow:0 10px 28px rgba(74,50,33,.07);
   transition:transform .2s,box-shadow .2s;
   overflow:hidden;
@@ -260,6 +261,7 @@ h1{
   font-weight:800;
   background:rgba(255,255,255,.46);
   color:inherit;
+  text-align:center;
   cursor:pointer
 }
 
@@ -431,18 +433,6 @@ h1{
 }
 
 /* CATEGORY COLORS */
-
-.panel#mom-talks .product{
-  background:#fff0f0
-}
-
-.panel#mom-talks .product:before{
-  background:#df7d86
-}
-
-.panel#mom-talks .buy{
-  background:#df7d86
-}
 
 .panel#baby-essentials .product{
   background:#f1f8e9
@@ -734,11 +724,13 @@ h1{
 
   <div class="categories">
 
-    <!-- MOM TALKS -->
+    <!-- MOM TALKS (DIRECT LINK) -->
 
-    <button class="category"
-            onclick="openPanel('mom-talks')"
-            aria-label="Open 1:1 Mom Talks">
+    <a class="category"
+       href="https://topmate.io/kanmanivishal/2254556"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Book 1:1 Mom Talk on Topmate">
 
       <div class="category-icon">
 
@@ -761,10 +753,10 @@ h1{
       </div>
 
       <div class="explore">
-        View Finds&nbsp; ›
+        Book Session&nbsp; ›
       </div>
 
-    </button>
+    </a>
 
 
     <!-- PUMPING -->
@@ -861,53 +853,6 @@ h1{
       </div>
 
     </button>
-
-  </div>
-
-</section>
-
-
-<!-- 1:1 MOM TALKS -->
-
-<section id="mom-talks" class="panel">
-
-  <div class="panel-head">
-    <button class="back" onclick="goHome()" aria-label="Back">‹</button>
-    <div class="panel-title">1:1 Mom Talks</div>
-  </div>
-
-  <div class="product-grid">
-
-    <a class="product"
-       href="https://topmate.io/kanmanivishal/2254556"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <div class="product-row">
-
-        <div class="product-body">
-
-          <span class="product-tag">
-            PERSONAL SUPPORT
-          </span>
-
-          <div class="product-name">
-            Book a 1:1 Mom Talk
-          </div>
-
-          <div class="product-meta">
-            A personal session with Kanmani
-          </div>
-
-        </div>
-
-        <span class="buy">
-          Book a Session&nbsp; →
-        </span>
-
-      </div>
-
-    </a>
 
   </div>
 
