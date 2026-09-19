@@ -91,23 +91,38 @@ body{
 h1{
   font-family:Georgia, serif;
   font-size:36px;
-  margin:8px 0 4px;
+  margin:8px 0 6px;
   color:var(--brown);
   letter-spacing:-0.5px;
 }
 
-.handle-tag{
+/* CLICKABLE INSTAGRAM HANDLE BUTTON */
+.handle-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--muted);
+  text-decoration:none;
   font-size:14px;
   font-weight:600;
-  color:var(--muted);
-  display:block;
-  margin-bottom:8px;
+  background:rgba(255,255,255,0.85);
+  padding:6px 16px;
+  border-radius:99px;
+  border:1px solid rgba(210,190,180,0.5);
+  transition:all .2s;
+}
+
+.handle-btn:hover{
+  background:#fff;
+  color:var(--pink);
+  transform:translateY(-1px);
+  box-shadow:0 4px 12px rgba(180,120,100,0.12);
 }
 
 .tagline{
   font-size:15px;
   color:#6e584c;
-  margin:8px 0 0;
+  margin:12px 0 0;
   font-weight:500;
 }
 
@@ -479,7 +494,7 @@ h1{
 
 <main class="wrap">
 
-  <!-- PROFILE -->
+  <!-- PROFILE HEADER -->
   <header class="profile">
     <div class="avatar-wrapper">
       <div class="avatar">
@@ -489,7 +504,12 @@ h1{
     </div>
 
     <h1>Kanmani Finds</h1>
-    <span class="handle-tag">@kanmani.vishal</span>
+
+    <!-- CLICKABLE INSTAGRAM BUTTON HANDLE -->
+    <a href="https://www.instagram.com/kanmani.vishal/" target="_blank" class="handle-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      @kanmani.vishal
+    </a>
 
     <p class="tagline">Handpicked by a mom, from real experience ❤️</p>
   </header>
