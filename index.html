@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kanmani Finds | @kanmani.vishal</title>
 <meta name="description" content="Kanmani Finds — mom talks, baby essentials and useful finds from @kanmani.vishal">
 
@@ -18,7 +18,28 @@
   --gold: #d69e36;
   --green: #68a352;
   --purple: #926fb3;
-  --card-bg: rgba(255, 255, 255, 0.82);
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --border-color: rgba(220, 200, 190, 0.4);
+  --doodle-opacity: 0.08;
+  --doodle-color: %23a28678;
+  --item-bg: #ffffff;
+  --btn-buy-bg: #222222;
+  --btn-buy-color: #ffffff;
+}
+
+[data-theme="dark"] {
+  --cream: #1e1916;
+  --brown: #f3eae3;
+  --muted: #b8a69b;
+  --pink: #ea8a92;
+  --pink-light: #332022;
+  --card-bg: rgba(42, 34, 30, 0.85);
+  --border-color: rgba(90, 75, 65, 0.5);
+  --doodle-opacity: 0.05;
+  --doodle-color: %23ffffff;
+  --item-bg: #28211c;
+  --btn-buy-bg: #ea8a92;
+  --btn-buy-color: #1e1916;
 }
 
 html{scroll-behavior:smooth}
@@ -31,16 +52,45 @@ body{
   background-color:var(--cream);
   /* DOODLE WATERMARK BACKGROUND PATTERN */
   background-image: 
-    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a28678' fill-opacity='0.08'%3E%3Cpath d='M20 20c2-4 6-4 8 0c2 4-2 8-4 10c-2-2-6-6-4-10z'/%3E%3Cpath d='M80 30a5 5 0 1 0 0-10a5 5 0 0 0 0 10z'/%3E%3Cpath d='M40 80c0-5 6-8 10-4c4 4 1 10-4 10c-5 0-6-3-6-6z'/%3E%3Cpath d='M95 85l3 6l6 1l-4.5 4.5l1 6.5l-5.5-3l-5.5 3l1-6.5l-4.5-4.5l6-1z'/%3E%3Ccircle cx='15' cy='95' r='3'/%3E%3Ccircle cx='105' cy='15' r='4'/%3E%3C/g%3E%3C/svg%3E"),
-    radial-gradient(circle at 10% 10%, #ffe3e5 0%, transparent 40%),
-    radial-gradient(circle at 90% 90%, #fff1d6 0%, transparent 40%);
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='var(--doodle-color)' fill-opacity='0.08'%3E%3Cpath d='M20 20c2-4 6-4 8 0c2 4-2 8-4 10c-2-2-6-6-4-10z'/%3E%3Cpath d='M80 30a5 5 0 1 0 0-10a5 5 0 0 0 0 10z'/%3E%3Cpath d='M40 80c0-5 6-8 10-4c4 4 1 10-4 10c-5 0-6-3-6-6z'/%3E%3Cpath d='M95 85l3 6l6 1l-4.5 4.5l1 6.5l-5.5-3l-5.5 3l1-6.5l-4.5-4.5l6-1z'/%3E%3Ccircle cx='15' cy='95' r='3'/%3E%3Ccircle cx='105' cy='15' r='4'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(circle at 10% 10%, rgba(255, 227, 229, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(255, 241, 214, 0.15) 0%, transparent 40%);
   background-attachment:fixed;
+  transition:background-color .3s ease, color .3s ease;
 }
 
 .wrap{
   width:min(100%,680px);
   margin:auto;
-  padding:32px 20px 40px;
+  padding:20px 20px 40px;
+  position:relative;
+}
+
+/* DARK MODE TOGGLE */
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.theme-toggle {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--brown);
+  padding: 8px 14px;
+  border-radius: 99px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all .2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
 }
 
 /* PROFILE HEADER */
@@ -105,15 +155,14 @@ h1{
   text-decoration:none;
   font-size:14px;
   font-weight:600;
-  background:rgba(255,255,255,0.85);
+  background:var(--card-bg);
   padding:6px 16px;
   border-radius:99px;
-  border:1px solid rgba(210,190,180,0.5);
+  border:1px solid var(--border-color);
   transition:all .2s;
 }
 
 .handle-btn:hover{
-  background:#fff;
   color:var(--pink);
   transform:translateY(-1px);
   box-shadow:0 4px 12px rgba(180,120,100,0.12);
@@ -121,26 +170,31 @@ h1{
 
 .tagline{
   font-size:15px;
-  color:#6e584c;
+  color:var(--muted);
   margin:12px 0 0;
   font-weight:500;
 }
 
 /* HERO: 1:1 MOM TALKS TOPMATE CARD */
 .topmate-hero{
-  background:linear-gradient(135deg, rgba(255,240,240,0.95) 0%, rgba(255,248,223,0.95) 100%),
-    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10c2-3 5-3 7 0c2 3-1 6-3.5 8c-2.5-2-5.5-5-3.5-8z' fill='%23e07a82' fill-opacity='0.08'/%3E%3C/svg%3E");
+  background:linear-gradient(135deg, rgba(255,240,240,0.95) 0%, rgba(255,248,223,0.95) 100%);
   border:2px solid #fce3e5;
   border-radius:28px;
   padding:26px;
   text-decoration:none;
-  color:inherit;
+  color:#4d3528;
   display:block;
   position:relative;
   overflow:hidden;
   box-shadow:0 12px 35px rgba(220,120,130,0.12);
   margin-bottom:28px;
   transition:transform .25s ease, box-shadow .25s ease;
+}
+
+[data-theme="dark"] .topmate-hero {
+  background:linear-gradient(135deg, rgba(55, 35, 38, 0.95) 0%, rgba(50, 45, 35, 0.95) 100%);
+  border-color: #52373a;
+  color: #f3eae3;
 }
 
 .topmate-hero:hover{
@@ -167,6 +221,10 @@ h1{
   flex-shrink:0;
 }
 
+[data-theme="dark"] .hero-icon {
+  background:rgba(0,0,0,0.3);
+}
+
 .hero-icon svg{
   width:36px;
   height:36px;
@@ -175,19 +233,19 @@ h1{
   stroke-width:2;
   stroke-linecap:round;
   stroke-linejoin:round;
+  display:block;
 }
 
 .hero-title{
   font-family:Georgia, serif;
   font-size:26px;
   font-weight:700;
-  color:var(--brown);
   line-height:1.2;
 }
 
 .hero-desc{
   font-size:14px;
-  color:#725f54;
+  color:var(--muted);
   line-height:1.5;
   margin-bottom:20px;
 }
@@ -206,10 +264,6 @@ h1{
   transition:background .2s;
 }
 
-.topmate-hero:hover .hero-cta{
-  background:#d06870;
-}
-
 /* SECTION HEADING */
 .section-title{
   font-family:Georgia, serif;
@@ -225,7 +279,7 @@ h1{
   content:"";
   flex:1;
   height:1px;
-  background:rgba(180,150,130,0.2);
+  background:var(--border-color);
 }
 
 /* CATEGORIES GRID */
@@ -239,32 +293,29 @@ h1{
 .card{
   background:var(--card-bg);
   backdrop-filter:blur(8px);
-  border:1px solid rgba(255,255,255,0.9);
+  border:1px solid var(--border-color);
   border-radius:22px;
   padding:22px 14px 18px;
   text-align:center;
   cursor:pointer;
   transition:all .2s ease;
-  box-shadow:0 8px 24px rgba(80,50,30,0.05);
+  box-shadow:0 8px 24px rgba(0,0,0,0.05);
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:space-between;
-  width:100%;
 }
 
 .card:hover{
   transform:translateY(-3px);
-  box-shadow:0 12px 28px rgba(80,50,30,0.1);
-  background:#fff;
+  box-shadow:0 12px 28px rgba(0,0,0,0.1);
 }
 
-.card-top-content{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  width:100%;
+.card-top-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .card-icon{
@@ -276,7 +327,10 @@ h1{
   justify-content:center;
   margin:0 auto 12px auto;
   background:rgba(255,255,255,0.7);
-  flex-shrink:0;
+}
+
+[data-theme="dark"] .card-icon {
+  background:rgba(0,0,0,0.25);
 }
 
 .card-icon svg{
@@ -300,36 +354,31 @@ h1{
   color:var(--brown);
   line-height:1.2;
   margin-bottom:6px;
-  text-align:center;
-  width:100%;
 }
 
 .card-sub{
   font-size:12px;
-  color:#725f54;
+  color:var(--muted);
   line-height:1.35;
   margin-bottom:14px;
-  text-align:center;
-  width:100%;
 }
 
 .view-finds-btn{
   font-size:12px;
   font-weight:700;
   color:var(--brown);
-  background:rgba(255,255,255,0.9);
-  border:1px solid rgba(200,180,170,0.4);
+  background:var(--card-bg);
+  border:1px solid var(--border-color);
   padding:6px 14px;
   border-radius:99px;
   transition:all .2s;
   display:inline-block;
-  margin-top:auto;
 }
 
 .card:hover .view-finds-btn{
-  background:var(--brown);
+  background:var(--pink);
   color:#fff;
-  border-color:var(--brown);
+  border-color:var(--pink);
 }
 
 /* PANELS & PRODUCTS */
@@ -349,18 +398,17 @@ h1{
 }
 
 .back-btn{
-  border:1px solid #eadfd5;
-  background:rgba(255,255,255,.9);
+  border:1px solid var(--border-color);
+  background:var(--card-bg);
   color:var(--brown);
   width:42px;
   height:42px;
   border-radius:14px;
   font-size:25px;
   cursor:pointer;
-  box-shadow:0 5px 15px rgba(70,44,28,.06);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  box-shadow:0 5px 15px rgba(0,0,0,.06);
+  display:grid;
+  place-items:center;
 }
 
 .panel-title{
@@ -379,13 +427,13 @@ h1{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  background:#fff;
+  background:var(--item-bg);
   padding:18px 20px;
   border-radius:18px;
   text-decoration:none;
   color:inherit;
-  box-shadow:0 6px 18px rgba(70,40,20,0.05);
-  border:1px solid rgba(220,200,190,0.3);
+  box-shadow:0 6px 18px rgba(0,0,0,0.05);
+  border:1px solid var(--border-color);
   transition:transform .2s;
 }
 
@@ -400,13 +448,13 @@ h1{
 
 .product-sub{
   font-size:13px;
-  color:#8b776b;
+  color:var(--muted);
   margin-top:4px;
 }
 
 .btn-buy{
-  background:#222;
-  color:#fff;
+  background:var(--btn-buy-bg);
+  color:var(--btn-buy-color);
   padding:10px 16px;
   border-radius:12px;
   font-size:13px;
@@ -416,12 +464,12 @@ h1{
 
 /* EMPTY PANEL */
 .empty{
-  background:rgba(255,255,255,.9);
-  border:1px solid #eadfd5;
+  background:var(--card-bg);
+  border:1px solid var(--border-color);
   border-radius:28px;
   padding:40px 20px;
   text-align:center;
-  box-shadow:0 9px 24px rgba(74,50,33,.07);
+  box-shadow:0 9px 24px rgba(0,0,0,.07);
 }
 
 .empty-icon{
@@ -436,7 +484,7 @@ h1{
 
 .empty-text{
   font-size:13px;
-  color:#8b776b;
+  color:var(--muted);
   margin-top:7px;
 }
 
@@ -444,7 +492,7 @@ h1{
 .social-footer{
   margin-top:40px;
   padding-top:24px;
-  border-top:1px solid rgba(180,150,130,0.2);
+  border-top:1px solid var(--border-color);
   text-align:center;
   display:flex;
   flex-direction:column;
@@ -464,29 +512,27 @@ h1{
   gap:8px;
   padding:10px 20px;
   border-radius:99px;
-  background:#fff;
+  background:var(--card-bg);
   color:var(--brown);
   text-decoration:none;
   font-size:14px;
   font-weight:700;
-  box-shadow:0 4px 14px rgba(70,40,20,0.08);
-  border:1px solid rgba(220,200,190,0.4);
+  box-shadow:0 4px 14px rgba(0,0,0,0.08);
+  border:1px solid var(--border-color);
   transition:all .2s ease;
 }
 
 .social-btn:hover{
   transform:translateY(-2px);
-  box-shadow:0 8px 20px rgba(70,40,20,0.12);
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
 }
 
 .social-btn.insta:hover{
   color:#e1306c;
-  border-color:#fce0e8;
 }
 
 .social-btn.yt:hover{
   color:#ff0000;
-  border-color:#ffe0e0;
 }
 
 .social-btn svg{
@@ -501,28 +547,9 @@ h1{
 }
 
 @media(max-width:560px){
-  .grid{ 
-    grid-template-columns:1fr; 
-  }
-  .card{ 
-    flex-direction:column; 
-    align-items:center;
-    justify-content:center;
-    text-align:center; 
-    padding:20px 16px; 
-  }
-  .card-top-content{
-    align-items:center;
-    justify-content:center;
-  }
-  .card-icon{ 
-    margin:0 auto 12px auto; 
-  }
-  .view-finds-btn{ 
-    width:auto; 
-    text-align:center; 
-    margin-top:4px;
-  }
+  .grid{ grid-template-columns:1fr; }
+  .card{ flex-direction:column; text-align:center; padding:20px 16px; }
+  .view-finds-btn{ width:100%; text-align:center; }
 }
 </style>
 </head>
@@ -531,11 +558,19 @@ h1{
 
 <main class="wrap">
 
+  <!-- TOP NAV WITH DARK MODE TOGGLE -->
+  <div class="top-nav">
+    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">
+      <span id="themeIcon">🌙</span>
+      <span id="themeText">Dark Mode</span>
+    </button>
+  </div>
+
   <!-- PROFILE HEADER -->
   <header class="profile">
     <div class="avatar-wrapper">
       <div class="avatar">
-        <img src="profile.png" alt="Kanmani" onerror="this.src='https://placehold.co/120x120/ffe3e5/4d3528?text=Kanmani'">
+        <img src="profile.png" alt="Kanmani">
       </div>
       <div class="verified-badge">♥</div>
     </div>
@@ -718,6 +753,34 @@ function goHome(){
   document.getElementById('home').style.display='block';
   window.scrollTo({top:0, behavior:'smooth'});
 }
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const icon = document.getElementById('themeIcon');
+  const text = document.getElementById('themeText');
+  
+  if (current === 'dark') {
+    document.documentElement.removeAttribute('data-theme');
+    icon.textContent = '🌙';
+    text.textContent = 'Dark Mode';
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    icon.textContent = '☀️';
+    text.textContent = 'Light Mode';
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Load saved theme preference
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('themeIcon').textContent = '☀️';
+    document.getElementById('themeText').textContent = 'Light Mode';
+  }
+})();
 </script>
 
 </body>
