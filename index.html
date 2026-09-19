@@ -19,6 +19,27 @@
   --green: #68a352;
   --purple: #926fb3;
   --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(255, 255, 255, 0.9);
+  --bg-overlay: linear-gradient(180deg, rgba(255,250,243,.56), rgba(255,250,243,.72));
+  --hero-bg: linear-gradient(135deg, rgba(255,240,240,0.95) 0%, rgba(255,248,223,0.95) 100%);
+  --hero-border: #fce3e5;
+  --item-bg: #ffffff;
+  --sub-text: #725f54;
+}
+
+[data-theme="dark"] {
+  --cream: #1a1614;
+  --brown: #f3ece7;
+  --muted: #bdaaa0;
+  --pink: #ee8a92;
+  --pink-light: #2d1e20;
+  --card-bg: rgba(35, 28, 25, 0.85);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --bg-overlay: linear-gradient(180deg, rgba(26,22,20,.75), rgba(26,22,20,.88));
+  --hero-bg: linear-gradient(135deg, rgba(45,30,32,0.9) 0%, rgba(40,32,25,0.9) 100%);
+  --hero-border: #4a3436;
+  --item-bg: #28211d;
+  --sub-text: #c0b0a6;
 }
 
 html{scroll-behavior:smooth}
@@ -33,6 +54,7 @@ body{
   background-size: 260px 260px;
   background-attachment:fixed;
   position:relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body::before{
@@ -42,9 +64,33 @@ body::before{
   left:0;
   right:0;
   bottom:0;
-  background:linear-gradient(180deg, rgba(255,250,243,.56), rgba(255,250,243,.72));
+  background:var(--bg-overlay);
   pointer-events:none;
   z-index:0;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 100;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--brown);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08);
 }
 
 .wrap{
@@ -533,6 +579,8 @@ h1{
 
 <body>
 
+<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+
 <main class="wrap">
 
   <header class="profile">
@@ -718,6 +766,25 @@ function goHome(){
   document.getElementById('home').style.display='block';
   window.scrollTo({top:0, behavior:'smooth'});
 }
+
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  try {
+    localStorage.setItem('theme', newTheme);
+  } catch(e) {}
+  document.getElementById('themeToggle').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+}
+
+// Load saved theme preference
+try {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeToggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+  }
+} catch(e) {}
 </script>
 
 </body>
